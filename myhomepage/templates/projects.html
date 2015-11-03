@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage | Tadej</title>  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href = "assets/css/bootstrap.min.css" rel = "stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    
+</head>
+
+<body>
+     <div class = "navbar navbar-inverse navbar-static-top">
+        <div class="container">
+           <dev class="navbar-header"><a href = "/" class = "navbar-brand">My HomePage</a></dev>
+            
+            
+            <button class="navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+               
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                
+                <ul class = "nav navbar-nav">
+                    <li class = "active"><a href = "/">Domov</a></li>
+                    <li><a href = "/about">O meni</a></li>
+                    <li><a href = "/projects">Moji projekti</a></li>
+                    <li><a href = "/blog">Blog</a></li>
+                    <li><a href = "/contact">Kontakt</a></li>    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        
+        <h2 >Projekti</h2>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <td class ="tableData">Boogle</td>
+                    <td><a href="http://potent-airfoil-111118.appspot.com/boogle.html">Link</a></td>
+                </tr>  
+                <tr>
+                  <td class ="tableData tdwidth">Fakebook</td>
+                    <td><a href="http://potent-airfoil-111118.appspot.com/fakebook.html">Link</a></td>  
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    $(function() {
+
+      $(".nav li").on("click", function() {
+        $(".nav li").removeClass("active");
+        $(this).addClass("active");
+      });
+
+    });
+    </script>  
+    
+    <script src="assets/js/bootstrap.js"></script>
+</body>
+</html>

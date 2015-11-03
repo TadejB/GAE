@@ -1,0 +1,188 @@
+body {
+background-color: rgb(226, 236, 239);
+}
+
+.navbar {
+    position: relative;
+    float:right;
+    height: :20px;
+    width: :100px;
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+}
+
+.keyImage {
+    
+    width: 43px;
+    height: 20px;
+}
+
+.appImage {
+    background-image: url(https://ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+    background-position: -132px -38px;
+    background-size: 528px 68px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-sizing:border-box;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    height: 30px;
+    line-height: normal;
+    opacity: 0.55;
+    outline-color: rgb(0, 0, 0);
+    outline-style: none;
+    outline-width: 0px;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 30px;
+}
+
+/*.logo {
+    position: relative;
+    top:300px;
+    width: 544px;
+    height: 184px;
+    background-image: url(https://www.google.si/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)
+}*/
+
+.birdImg {
+    width: 200px;
+    height: 111px;
+    top: 200px;
+    left:480px;
+    background-image:url(http://collegeplanningaz.files.wordpress.com/2013/05/footer-logo-without-white-background.png);
+    background-size: cover;
+    position:relative;
+}
+
+.jumbotron {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top:220px;
+    width: 400px;
+    height: 100px;
+    background-color: deeppink;
+    border-radius: 5px;
+    border-left: 20px solid deeppink;
+    border-right: 20px solid deeppink;
+}
+
+div.logo {
+    display: inline-block;
+    position: absolute;
+    font-size:70px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 50px;
+    font-family: 'Lobster', cursive;
+}
+
+#B {
+    left:0px;
+}
+
+#O1 {
+    left:70px;
+}
+
+#O2 {
+    left:140px;
+}
+#G {
+
+    left:210px;
+}
+
+#L {
+    left:280px;
+}
+
+#E {
+    left:350px;
+}
+
+input {
+    width: 480px;
+    height: 38px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top:230px;
+    margin-top: 15px;
+    box-sizing: border-box;
+    display:block;
+}
+
+.search {
+    margin-top: 20px;
+    height: 38px;
+    white-space: nowrap;
+    border: 1px solid #BFBFBF;
+    text-align: center;
+    line-height: 38px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #ECECEB;
+    font-weight: 600;
+}
+
+.buttonswrap {
+    width:245px;
+    height: 200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top:230px;
+}
+
+#buttonleft {
+    position:absolute;
+    margin-bottom: 15px;
+}
+
+#buttonright {
+    position:absolute;
+    right:0px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.footer {
+    left:0px;
+    position:fixed;
+    bottom: 0px;
+    height: 40px;
+    width:100%;
+    background-color:darkcyan;
+}
+
+.totheleft {
+    padding-left: 10px;
+    padding-right:10px;
+    float:left;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.totheright {
+    padding-left: 10px;
+    padding-right:10px;
+    float:right;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
