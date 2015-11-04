@@ -30,8 +30,21 @@ class BaseHandler(webapp2.RequestHandler):
 class MainHandler(BaseHandler):
     def get(self):
         now = datetime.now()
+        hour = now.hour+1
+        minute = now.minute
+        sec = now.second
+
+        if hour < 10:
+            hour = "%s%s" % ("0", hour)
+        if minute < 10:
+            minute = "%s%s" % ("0", minute)
+        if sec < 10:
+            sec = "%s%s" % ("0", sec)
+        if hour == 24:
+            hour = "00"
+
         params = {
-            "sporocilo": "%s:%s:%s" % ((now.hour+1), now.minute, now.second)
+            "sporocilo": "%s:%s:%s" % (hour, minute, sec)
         }
         return self.render_template("index.html", params=params)
 
