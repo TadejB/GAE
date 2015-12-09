@@ -6,3 +6,12 @@ p{
 .btn{
     padding: 6px 30px;
 }
+
+body {
+    background-image: url(../math-time-backgrounds.jpg)
+}
+
+.jumbotron {
+    opacity: 0.8;
+}
+

@@ -2,7 +2,7 @@
 import os
 import jinja2
 import webapp2
-
+import types
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -28,25 +28,56 @@ class BaseHandler(webapp2.RequestHandler):
 
 
 class MainHandler(BaseHandler):
+
     def get(self):
+
         return self.render_template("base.html")
 
     def post(self):
-        if self.request.get('addition'):
-            result = float(self.request.get('first_number')) + float(self.request.get('second_number'))
-        if self.request.get('subtraction'):
-            result = float(self.request.get('first_number')) - float(self.request.get('second_number'))
-        if self.request.get('multiplication'):
-            result = float(self.request.get('first_number')) * float(self.request.get('second_number'))
-        if self.request.get('division'):
-            result = float(self.request.get('first_number')) / float(self.request.get('second_number'))
 
-        params = {"result":result}
+        result = None
 
-        return self.render_template('base.html', params=params)
+
+        try:
+
+            first_number = float(self.request.get('first_number'))
+            second_number = float(self.request.get('second_number'))
+
+            if self.request.get('addition') is not '':
+                result = first_number + second_number
+
+            if self.request.get('subtraction') is not '':
+                result = first_number - second_number
+
+            if self.request.get('multiplication') is not '':
+                result = first_number * second_number
+
+            if self.request.get('division') is not '':
+                result = first_number / second_number
+
+
+
+            params = {'result':result}
+            return self.render_template('base.html', params=params)
+
+        except:
+
+            if self.request.get('second_number') == str(0):
+                result = 'Deljenje z 0 ni definirano'
+            else: result = 'Vneses lahko samo stevilke!'
+
+            params = {'result': result}
+            return self.render_template('base.html', params=params)
+
+
+
+
+
+
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
+
 ], debug=True)
 
 
